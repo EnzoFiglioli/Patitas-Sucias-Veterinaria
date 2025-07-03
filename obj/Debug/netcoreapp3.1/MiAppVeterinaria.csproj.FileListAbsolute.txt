@@ -1,0 +1,17 @@
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\bin\Debug\netcoreapp3.1\MiAppVeterinaria.exe
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\bin\Debug\netcoreapp3.1\MiAppVeterinaria.deps.json
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\bin\Debug\netcoreapp3.1\MiAppVeterinaria.runtimeconfig.json
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\bin\Debug\netcoreapp3.1\MiAppVeterinaria.runtimeconfig.dev.json
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\bin\Debug\netcoreapp3.1\MiAppVeterinaria.dll
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\bin\Debug\netcoreapp3.1\MiAppVeterinaria.pdb
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.AssemblyInfoInputs.cache
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.AssemblyInfo.cs
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.csproj.CoreCompileInputs.cache
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.dll
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.pdb
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.genruntimeconfig.cache
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Form1.resources
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.csproj.GenerateResource.cache
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Properties.Resources.resources
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Form2.resources
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.csprojAssemblyReference.cache
