@@ -1,27 +1,32 @@
-﻿namespace MiAppVeterinaria.models
+﻿using MiAppVeterinaria.Models;
+
+namespace MiAppVeterinaria.Models
 {
-    class Mascota
+    public class Mascota : RazaEntity
     {
-        public Especies especie { get; set; }
-        public string raza { get; set; }
-        public int edad { get; set; }
-        public string duenio { get; set; }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
 
+        public int Edad { get; set; }
+        public decimal Peso { get; set; }
+        public string NombreCompletoDuenio { get; set; }
+        public string ContactoDuenio { get; set; }
 
-        public Mascota(Especies especie, string raza, int edad, string duenio)
+        public Mascota() { }
+        public Mascota(int id, string nombre, string especie, string raza , int edad,decimal peso, string duenio, string contacto) : base(raza, especie)
         {
-            this.especie = especie;
-            this.raza = raza;
-            this.edad = edad;
-            this.duenio = duenio;
+            Id = id;
+            Nombre = nombre;
+            Edad = edad;
+            Peso = peso;
+            NombreCompletoDuenio = duenio;
+            ContactoDuenio = contacto;
         }
 
-        public enum Especies
+        public override string ToString()
         {
-            Perro,
-            Gato,
-            Loro
+            return $"{Nombre} - {NombreCompletoDuenio}";
         }
-
     }
+
 }

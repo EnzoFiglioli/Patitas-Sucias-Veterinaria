@@ -36,6 +36,7 @@ namespace MiAppVeterinaria
             this.btnRegistrarConsulta = new System.Windows.Forms.Button();
             this.btnAsignarTurno = new System.Windows.Forms.Button();
             this.btnConsultarHistorial = new System.Windows.Forms.Button();
+            this.btnListarMascotas = new System.Windows.Forms.Button();
             this.container = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,6 +49,7 @@ namespace MiAppVeterinaria
             this.flowLayoutPanel1.Controls.Add(this.btnRegistrarConsulta);
             this.flowLayoutPanel1.Controls.Add(this.btnAsignarTurno);
             this.flowLayoutPanel1.Controls.Add(this.btnConsultarHistorial);
+            this.flowLayoutPanel1.Controls.Add(this.btnListarMascotas);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -104,6 +106,15 @@ namespace MiAppVeterinaria
             this.btnConsultarHistorial.Text = "Consulta historial";
             this.btnConsultarHistorial.UseVisualStyleBackColor = true;
             // 
+            // btnListarMascotas
+            // 
+            this.btnListarMascotas.Location = new System.Drawing.Point(3, 390);
+            this.btnListarMascotas.Name = "btnListarMascotas";
+            this.btnListarMascotas.Size = new System.Drawing.Size(224, 44);
+            this.btnListarMascotas.TabIndex = 5;
+            this.btnListarMascotas.Text = "Listar Mascotas";
+            this.btnListarMascotas.UseVisualStyleBackColor = true;
+            // 
             // container
             // 
             this.container.ColumnCount = 3;
@@ -128,7 +139,6 @@ namespace MiAppVeterinaria
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.container);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.Text = "Form2";
@@ -149,5 +159,8 @@ namespace MiAppVeterinaria
         private System.Windows.Forms.Button btnAsignarTurno;
         private System.Windows.Forms.Button btnConsultarHistorial;
         private System.Windows.Forms.TableLayoutPanel container;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnListarMascotas;
+
     }
 }

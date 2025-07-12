@@ -1,4 +1,4 @@
-﻿namespace MiAppVeterinaria.models
+﻿namespace MiAppVeterinaria.Models
 {
     class Usuario
     {
