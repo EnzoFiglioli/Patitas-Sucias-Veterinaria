@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MiAppVeterinaria.DTO;
 using MiAppVeterinaria.Models;
-using MiAppVeterinaria.DTO;
+using System.Collections.Generic;
+using System.ComponentModel;
+
 
 
 namespace MiAppVeterinaria.Services
 {
     interface IMascotaService
     {
-        List<Mascota> GetMascotas();
+        BindingList<Mascota> GetMascotas();
         string CreateMascota(MascotaDTO mascota);
-        void DeleteMascotaById();
+        string DeleteMascotaById(int IdMascota);
         void UpdateMascotaById();
     }
 }

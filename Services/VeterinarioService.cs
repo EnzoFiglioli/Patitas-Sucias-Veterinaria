@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MySql.Data.MySqlClient;
-
-using MiAppVeterinaria.handlers;
-using MiAppVeterinaria.Models;
-using MiAppVeterinaria.DTO;
+﻿using MiAppVeterinaria.DTO;
 using MiAppVeterinaria.Repository;
+using System;
+using System.Collections.Generic;
 
 
 namespace MiAppVeterinaria.Services
@@ -14,12 +9,13 @@ namespace MiAppVeterinaria.Services
     class VeterinarioService : IVeterinarioService
     {
         private readonly VeterinarioRepository veterinarioRepository = new VeterinarioRepository();
-        public void CrearVeterinario(VeterinarioDTO veterinario) {
+        public void CrearVeterinario(VeterinarioDTO veterinario)
+        {
             try
             {
                 veterinarioRepository.Crear(veterinario);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }

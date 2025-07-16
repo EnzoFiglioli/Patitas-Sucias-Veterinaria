@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MiAppVeterinaria.Repository
+﻿namespace MiAppVeterinaria.Repository
 {
     interface ITurnoRepository
     {

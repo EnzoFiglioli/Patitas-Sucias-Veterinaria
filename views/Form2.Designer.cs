@@ -1,166 +1,76 @@
-﻿
+﻿using System.Windows.Forms;
+
 namespace MiAppVeterinaria
 {
     partial class Form2
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private FlowLayoutPanel navbar;
+        private PictureBox pictureBox1;
+        private Panel mainPanel;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.navbar = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnRegistrarMascota = new System.Windows.Forms.Button();
-            this.btnRegistrarConsulta = new System.Windows.Forms.Button();
-            this.btnAsignarTurno = new System.Windows.Forms.Button();
-            this.btnConsultarHistorial = new System.Windows.Forms.Button();
-            this.btnListarMascotas = new System.Windows.Forms.Button();
-            this.container = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.navbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // navbar
             // 
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
-            this.flowLayoutPanel1.Controls.Add(this.btnRegistrarMascota);
-            this.flowLayoutPanel1.Controls.Add(this.btnRegistrarConsulta);
-            this.flowLayoutPanel1.Controls.Add(this.btnAsignarTurno);
-            this.flowLayoutPanel1.Controls.Add(this.btnConsultarHistorial);
-            this.flowLayoutPanel1.Controls.Add(this.btnListarMascotas);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(245, 450);
-            this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.navbar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.navbar.Controls.Add(this.pictureBox1);
+            this.navbar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.navbar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.navbar.Location = new System.Drawing.Point(0, 0);
+            this.navbar.Name = "navbar";
+            this.navbar.Padding = new System.Windows.Forms.Padding(10);
+            this.navbar.Size = new System.Drawing.Size(250, 700);
+            this.navbar.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(242, 181);
+            this.pictureBox1.Size = new System.Drawing.Size(240, 160);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnRegistrarMascota
+            // mainPanel
             // 
-            this.btnRegistrarMascota.Location = new System.Drawing.Point(3, 190);
-            this.btnRegistrarMascota.Name = "btnRegistrarMascota";
-            this.btnRegistrarMascota.Size = new System.Drawing.Size(222, 44);
-            this.btnRegistrarMascota.TabIndex = 1;
-            this.btnRegistrarMascota.Text = "Registrar Mascota";
-            this.btnRegistrarMascota.UseVisualStyleBackColor = true;
-            this.btnRegistrarMascota.Click += new System.EventHandler(this.btnRegistrarMascota_Click);
-            // 
-            // btnRegistrarConsulta
-            // 
-            this.btnRegistrarConsulta.Location = new System.Drawing.Point(3, 240);
-            this.btnRegistrarConsulta.Name = "btnRegistrarConsulta";
-            this.btnRegistrarConsulta.Size = new System.Drawing.Size(224, 44);
-            this.btnRegistrarConsulta.TabIndex = 2;
-            this.btnRegistrarConsulta.Text = "Registrar Consulta";
-            this.btnRegistrarConsulta.UseVisualStyleBackColor = true;
-            this.btnRegistrarConsulta.Click += new System.EventHandler(this.btnRegistrarConsulta_Click);
-            // 
-            // btnAsignarTurno
-            // 
-            this.btnAsignarTurno.Location = new System.Drawing.Point(3, 290);
-            this.btnAsignarTurno.Name = "btnAsignarTurno";
-            this.btnAsignarTurno.Size = new System.Drawing.Size(224, 44);
-            this.btnAsignarTurno.TabIndex = 3;
-            this.btnAsignarTurno.Text = "Asignar turno";
-            this.btnAsignarTurno.UseVisualStyleBackColor = true;
-            this.btnAsignarTurno.Click += new System.EventHandler(this.btnAsignarTurno_Click);
-            // 
-            // btnConsultarHistorial
-            // 
-            this.btnConsultarHistorial.Location = new System.Drawing.Point(3, 340);
-            this.btnConsultarHistorial.Name = "btnConsultarHistorial";
-            this.btnConsultarHistorial.Size = new System.Drawing.Size(224, 44);
-            this.btnConsultarHistorial.TabIndex = 4;
-            this.btnConsultarHistorial.Text = "Consulta historial";
-            this.btnConsultarHistorial.UseVisualStyleBackColor = true;
-            // 
-            // btnListarMascotas
-            // 
-            this.btnListarMascotas.Location = new System.Drawing.Point(3, 390);
-            this.btnListarMascotas.Name = "btnListarMascotas";
-            this.btnListarMascotas.Size = new System.Drawing.Size(224, 44);
-            this.btnListarMascotas.TabIndex = 5;
-            this.btnListarMascotas.Text = "Listar Mascotas";
-            this.btnListarMascotas.UseVisualStyleBackColor = true;
-            // 
-            // container
-            // 
-            this.container.ColumnCount = 3;
-            this.container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.container.Location = new System.Drawing.Point(245, 0);
-            this.container.Name = "container";
-            this.container.RowCount = 1;
-            this.container.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.container.Size = new System.Drawing.Size(555, 450);
-            this.container.TabIndex = 1;
-            this.container.Paint += new System.Windows.Forms.PaintEventHandler(this.container_Paint_1);
+            this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(250, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(750, 700);
+            this.mainPanel.TabIndex = 0;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.container);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.MaximizeBox = false;
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.navbar);
             this.Name = "Form2";
-            this.Text = "Form2";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
-            this.Load += new System.EventHandler(this.Form2_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.Text = "Panel Principal";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
+            this.navbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
-
-        #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnRegistrarMascota;
-        private System.Windows.Forms.Button btnRegistrarConsulta;
-        private System.Windows.Forms.Button btnAsignarTurno;
-        private System.Windows.Forms.Button btnConsultarHistorial;
-        private System.Windows.Forms.TableLayoutPanel container;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnListarMascotas;
-
     }
 }

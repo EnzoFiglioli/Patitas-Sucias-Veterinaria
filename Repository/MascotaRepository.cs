@@ -4,16 +4,17 @@ using MiAppVeterinaria.Models;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace MiAppVeterinaria.Repository
 {
-    class MascotaRepository
+    class MascotaRepository : IMascotaRepository
     {
         public MascotaRepository() { }
 
-        public List<Mascota> ObtenerMascotas()
+        public BindingList<Mascota> ObtenerMascotas()
         {
-            List<Mascota> listaMascotas = new List<Mascota>();
+            BindingList<Mascota> listaMascotas = new BindingList<Mascota>();
             try
             {
                 using (MySqlConnection conn = DBConnection.GetInstance().CreateConnection())
@@ -52,7 +53,7 @@ namespace MiAppVeterinaria.Repository
             return listaMascotas;
         }
 
-        private List<GetRazaEspecieDTO> ObtenerRazaAnimalId(int id)
+        public List<GetRazaEspecieDTO> ObtenerRazaAnimalId(int id)
         {
             List<GetRazaEspecieDTO> listarRazas = new List<GetRazaEspecieDTO>();
             try
@@ -101,9 +102,9 @@ namespace MiAppVeterinaria.Repository
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                        cmd.Parameters.AddWithValue("@in_nombre_mascota", mascota.Nombre);
+                        cmd.Parameters.AddWithValue("@in_nombre_mascota", mascota.NombreMascota);
                         cmd.Parameters.AddWithValue("@in_especie", mascota.EspecieId);
-                        cmd.Parameters.AddWithValue("@in_raza", mascota.RazaId);
+                        cmd.Parameters.AddWithValue("@in_raza", mascota.Raza);
                         cmd.Parameters.AddWithValue("@in_edad", mascota.Edad);
                         cmd.Parameters.AddWithValue("@in_peso", mascota.Peso);
                         cmd.Parameters.AddWithValue("@in_duenio", mascota.DuenioId);
@@ -111,13 +112,49 @@ namespace MiAppVeterinaria.Repository
                         cmd.ExecuteNonQuery();
                     }
                 }
-                return "E";
+                return "Mascota creada exitosamente.";
             }
-            catch (Exception)
+            catch (MySqlException ex)
             {
-                throw;
+                // Mostrar error de MySQL con detalle
+                return $"Error MySQL: {ex.Message} Código: {ex.Number}";
             }
-            return "Usuario agregado exitosamente!";
+            catch (Exception ex)
+            {
+                // Error genérico
+                return $"Error: {ex.Message}";
+            }
         }
+
+        public string EliminarMascotaPorId(int id)
+        {
+            try
+            {
+                using (MySqlConnection conn = DBConnection.GetInstance().CreateConnection())
+                {
+                    conn.Open();
+
+                    using (MySqlCommand cmd = new MySqlCommand("EliminarMascota", conn))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@m_id", id);
+
+                        MySqlParameter mensajeParam = new MySqlParameter("@v_message", MySqlDbType.VarChar, 100);
+                        mensajeParam.Direction = System.Data.ParameterDirection.Output;
+                        cmd.Parameters.Add(mensajeParam);
+
+                        cmd.ExecuteNonQuery();
+
+                        return mensajeParam.Value.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return "Error al eliminar: " + ex.Message;
+            }
+        }
+
     }
 }

@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MiAppVeterinaria.DTO;
+﻿using MiAppVeterinaria.DTO;
 using MiAppVeterinaria.Repository;
+using System;
+using System.Collections.Generic;
 
 
 namespace MiAppVeterinaria.Services
@@ -14,7 +13,8 @@ namespace MiAppVeterinaria.Services
         {
             try
             {
-                if(string.IsNullOrWhiteSpace(consultaDTO.Sintomas)){
+                if (string.IsNullOrWhiteSpace(consultaDTO.Sintomas))
+                {
                     throw new ArgumentException("El sintoma es obligatorio.");
                 }
 
@@ -27,8 +27,9 @@ namespace MiAppVeterinaria.Services
         }
         public void EliminarPorId(int ConsultaId) { }
         public void ActualizarPorId(int ConsultaId) { }
-        public List<ConsultaDTO> ObtenerTodas() { 
-            List < ConsultaDTO > listaConsultas = new List<ConsultaDTO>();
+        public List<ConsultaDTO> ObtenerTodas()
+        {
+            List<ConsultaDTO> listaConsultas = new List<ConsultaDTO>();
             return listaConsultas;
         }
     }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MiAppVeterinaria.DTO
+﻿namespace MiAppVeterinaria.DTO
 {
     public class VeterinarioDTO
     {
@@ -13,7 +9,7 @@ namespace MiAppVeterinaria.DTO
         public string Contacto { get; set; }
 
         public VeterinarioDTO() { }
-        public VeterinarioDTO( string nombre, string apellido, bool disponible, string contacto)
+        public VeterinarioDTO(string nombre, string apellido, bool disponible, string contacto)
         {
             Nombre = nombre;
             Apellido = apellido;

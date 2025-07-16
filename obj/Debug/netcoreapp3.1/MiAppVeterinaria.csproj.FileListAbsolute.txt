@@ -45,3 +45,12 @@ C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\bin\Debug\netcoreapp3.1\run
 C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.csproj.CopyComplete
 C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.ListarMascotas.resources
 C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Views.RegistrarCliente.resources
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Views.ConsultasView.resources
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Views.MascotasView.resources
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Views.AsignarTurnoView.resources
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Views.RegistrarMascotaView.resources
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Views.ReportesView - Copia.resources
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Views.ReportesView.resources
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Views.TurnosAsignadosView.resources
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Views.TurnosView.resources
+C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\obj\Debug\netcoreapp3.1\MiAppVeterinaria.Views.UsuariosView.resources

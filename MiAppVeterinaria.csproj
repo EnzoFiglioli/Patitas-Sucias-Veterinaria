@@ -16,12 +16,33 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Views\ListarDueniosView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\TurnosAsignadosView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\RegistrarMascotaView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\AsignarTurnoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\TurnosView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\ReportesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ReportesView - Copia.resx">
+      <DependentUpon>ReportesView.resx</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
 

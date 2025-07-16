@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MiAppVeterinaria.DTO;
-using MySql.Data.MySqlClient;
+﻿using MiAppVeterinaria.DTO;
 using MiAppVeterinaria.handlers;
+using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
 
 namespace MiAppVeterinaria.Repository
 {

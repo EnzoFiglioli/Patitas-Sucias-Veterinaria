@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using MiAppVeterinaria.Models;
+using MiAppVeterinaria.DTO;
 
 namespace MiAppVeterinaria.Services
 {
-    class ITurnoService
+    interface ITurnoService
     {
+        List<Turno> ObtenerTurnos();
+        string RegistrarTurno(TurnoDTO turnoDTO);
     }
 }

@@ -1,9 +1,8 @@
-﻿using MiAppVeterinaria.Models;
+﻿using MiAppVeterinaria.DTO;
+using MiAppVeterinaria.Models;
 using MiAppVeterinaria.Repository;
-using MiAppVeterinaria.DTO;
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 
 
 namespace MiAppVeterinaria.Services
@@ -14,12 +13,32 @@ namespace MiAppVeterinaria.Services
 
         public MascotaService() { }
 
-        public List<Mascota> GetMascotas()
+        public BindingList<Mascota> GetMascotas()
         {
-            List<Mascota> listaMascotas = new List<Mascota>();
-            return _mascotaRepository.ObtenerMascotas();
+            var mascotas = _mascotaRepository.ObtenerMascotas(); 
+            var lista = new BindingList<Mascota>();
+
+            foreach (var m in mascotas)
+            {
+                lista.Add(new Mascota
+                {
+                    Id = m.Id,
+                    Nombre = m.Nombre,
+                    Edad = m.Edad,
+                    Especie = m.Especie,
+                    Raza = m.Raza,
+                    NombreCompletoDuenio= m.NombreCompletoDuenio,
+                    Peso = m.Peso,
+                    ContactoDuenio = m.ContactoDuenio
+                });
+            }
+
+            return lista;
         }
-        public string CreateMascota(MascotaDTO mascota) {
+
+
+        public string CreateMascota(MascotaDTO mascota)
+        {
             try
             {
                 if (mascota == null)
@@ -34,7 +53,21 @@ namespace MiAppVeterinaria.Services
                 return "Ocurrió un error al crear la mascota: " + ex.Message;
             }
         }
-        public void DeleteMascotaById() { }
+        public string DeleteMascotaById(int idMascota) {
+            return _mascotaRepository.EliminarMascotaPorId(idMascota);            
+        }
         public void UpdateMascotaById() { }
+
+        private string ObtenerNombreEspeciePorId(int especieId)
+        {
+            string[] especies = { "Perro", "Gato", "Ave", "Otro" };
+            return especieId >= 0 && especieId < especies.Length ? especies[especieId] : "Desconocido";
+        }
+
+        private string ObtenerNombreDuenioPorId(int duenioId)
+        {
+            string[] duenios = { "Enzo Figlioli", "Florencia Iriarte", "Nicolás Iriarte", "Marcelo Iriarte" };
+            return duenioId >= 0 && duenioId < duenios.Length ? duenios[duenioId] : "Desconocido";
+        }
     }
 }

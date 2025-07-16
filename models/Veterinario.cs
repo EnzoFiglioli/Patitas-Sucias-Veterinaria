@@ -17,5 +17,6 @@
             Disponible = disponible;
             Contacto = contacto;
         }
+        public string NombreApellido => $"{Nombre} {Apellido}";
     }
 }

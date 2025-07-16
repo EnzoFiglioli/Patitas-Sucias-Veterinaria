@@ -1,8 +1,5 @@
-﻿using System;
+﻿using MiAppVeterinaria.DTO;
 using System.Collections.Generic;
-using System.Text;
-
-using MiAppVeterinaria.DTO;
 
 namespace MiAppVeterinaria.Services
 {

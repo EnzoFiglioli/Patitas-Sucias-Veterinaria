@@ -4,6 +4,9 @@
     <_LastSelectedProfileId>C:\Users\Enzo\Desktop\Patas Felices\MiAppVeterinaria\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="Views\ConsultasView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -13,8 +16,14 @@
     <Compile Update="Views\ListarMascotas.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\MascotasView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\RegistrarCliente.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\UsuariosView.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

@@ -34,7 +34,7 @@ namespace MiAppVeterinaria.Layout.Buttons
                 BackColor = Color.LightCyan,
                 Font = new Font("Segoe UI", 10, FontStyle.Bold)
             };
-            if(onClick != null)
+            if (onClick != null)
             {
                 btn.Click += onClick;
             }

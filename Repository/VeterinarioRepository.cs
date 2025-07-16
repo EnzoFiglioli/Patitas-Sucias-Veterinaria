@@ -1,23 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MySql.Data.MySqlClient;
-
+﻿using MiAppVeterinaria.DTO;
 using MiAppVeterinaria.handlers;
-using MiAppVeterinaria.DTO;
+using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
 
 namespace MiAppVeterinaria.Repository
 {
     public class VeterinarioRepository : IVeterinarioRepository
-    { 
+    {
         public void Crear(VeterinarioDTO v)
         {
             try
             {
-                using(MySqlConnection conn = DBConnection.GetInstance().CreateConnection()){
+                using (MySqlConnection conn = DBConnection.GetInstance().CreateConnection())
+                {
                     conn.Open();
 
-                    using(MySqlCommand cmd = new MySqlCommand("CrearVeterinario", conn)){
+                    using (MySqlCommand cmd = new MySqlCommand("CrearVeterinario", conn))
+                    {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@i_Nombre", v.Nombre);
                         cmd.Parameters.AddWithValue("@i_Apellido", v.Apellido);
@@ -28,7 +28,7 @@ namespace MiAppVeterinaria.Repository
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -47,7 +47,7 @@ namespace MiAppVeterinaria.Repository
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                        using(MySqlDataReader reader = cmd.ExecuteReader())
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
